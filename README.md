@@ -30,9 +30,10 @@ vendas/
 ├── core.py     # Regras de negócio
 ├── output.py   # Formatação de saída
 └── cli.py      # Interface de linha de comando
-
+```
 
 ---
+
 
 ## 📥 Instalação
 
@@ -47,7 +48,16 @@ Calça,2,99.9,2026-02-15
 Tênis,1,199.9,2026-03-20
 
 ▶️ Executar
-vendas-cli vendas.csv
+Exemplos de chamadas:
+py -m vendas.cli arquivo.csv --format text --start 2026-01-10 --end 2026-01-10
+
+py -m vendas.cli arquivo.csv --format json --start 2026-02-15 --end 2026-02-15
+
+py -m vendas.cli arquivo.csv --format json --start 2026-03-20 --end 2026-03-20
+
+py -m vendas.cli arquivo.csv --format text --start 2026-01-10 --end 2026-02-10
+
+
 🔄 JSON
 vendas-cli vendas.csv --format json
 📅 Filtro (opcional)
