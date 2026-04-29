@@ -1,0 +1,7 @@
+[project]
+name = "vendas-cli"
+version = "0.1.0"
+dependencies = []
+
+[project.scripts]
+vendas-cli = "vendas.cli:main"
