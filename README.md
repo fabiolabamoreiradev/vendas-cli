@@ -39,6 +39,7 @@ vendas/
 
 ```bash
 py -m pip install .
+```
 
 ---
 
