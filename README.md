@@ -44,14 +44,17 @@ py -m pip install .
 ---
 
 ## 📄 CSV esperado
+```text
 produto,quantidade,preco_unitario,data_venda
 Camiseta,3,49.9,2026-01-10
 Calça,2,99.9,2026-02-15
 Tênis,1,199.9,2026-03-20
+```
 
 ---
 
 ## ▶️ Executar
+```text
 Exemplos de chamadas:
 py -m vendas.cli arquivo.csv --format text --start 2026-01-10 --end 2026-01-10
 
@@ -60,13 +63,15 @@ py -m vendas.cli arquivo.csv --format json --start 2026-02-15 --end 2026-02-15
 py -m vendas.cli arquivo.csv --format json --start 2026-03-20 --end 2026-03-20
 
 py -m vendas.cli arquivo.csv --format text --start 2026-01-10 --end 2026-02-10
+```
 
 ---
 
 ## 📊 Exemplo de saída
 
 🔄 JSON
-vendas-cli vendas.csv --format json
+```text
+py -m vendas-cli arquivo.csv --format json
 JSON
 {
   "total_por_produto": {
@@ -75,10 +80,11 @@ JSON
   "total_geral": 199.6,
   "produto_mais_vendido": "Camiseta"
 }
-
+```
 
 📅 Filtro (opcional)
-vendas-cli vendas.csv --start 2025-01-01 --end 2025-03-31
+```text
+py -m vendas-cli arquivo.csv --start 2025-01-01 --end 2025-03-31
 
 Texto
 Relatório de Vendas
@@ -89,6 +95,7 @@ Tênis               R$ 199.90
 ------------------------------
 TOTAL: R$ 599.30
 MAIS VENDIDO: Camiseta
+```
 
 ---
 
