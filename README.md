@@ -40,14 +40,17 @@ vendas/
 ```bash
 py -m pip install .
 
-▶️ Uso
-📄 CSV esperado
+---
+
+## 📄 CSV esperado
 produto,quantidade,preco_unitario,data_venda
 Camiseta,3,49.9,2026-01-10
 Calça,2,99.9,2026-02-15
 Tênis,1,199.9,2026-03-20
 
-▶️ Executar
+---
+
+## ▶️ Executar
 Exemplos de chamadas:
 py -m vendas.cli arquivo.csv --format text --start 2026-01-10 --end 2026-01-10
 
@@ -57,12 +60,25 @@ py -m vendas.cli arquivo.csv --format json --start 2026-03-20 --end 2026-03-20
 
 py -m vendas.cli arquivo.csv --format text --start 2026-01-10 --end 2026-02-10
 
+---
+
+## 📊 Exemplo de saída
 
 🔄 JSON
 vendas-cli vendas.csv --format json
+JSON
+{
+  "total_por_produto": {
+    "Camiseta": 199.6
+  },
+  "total_geral": 199.6,
+  "produto_mais_vendido": "Camiseta"
+}
+
+
 📅 Filtro (opcional)
 vendas-cli vendas.csv --start 2025-01-01 --end 2025-03-31
-📊 Exemplo de saída
+
 Texto
 Relatório de Vendas
 ------------------------------
@@ -72,15 +88,10 @@ Tênis               R$ 199.90
 ------------------------------
 TOTAL: R$ 599.30
 MAIS VENDIDO: Camiseta
-JSON
-{
-  "total_por_produto": {
-    "Camiseta": 199.6
-  },
-  "total_geral": 199.6,
-  "produto_mais_vendido": "Camiseta"
-}
-🧪 Testes
+
+---
+
+## 🧪 Testes
 
 Executar:
 
@@ -93,21 +104,9 @@ py -m pytest --cov=vendas --cov-report=term-missing
 Garantir mínimo:
 
 py -m pytest --cov=vendas --cov-fail-under=80
-⚠️ Tratamento de erros
-Arquivo não encontrado
-CSV vazio
-Campos obrigatórios ausentes
-Dados inválidos
-🧠 Decisões Técnicas
-Uso de bibliotecas padrão (csv, argparse, logging)
-Separação de responsabilidades
-Funções puras no core
-Validação no parser
-🔄 Melhorias futuras
-Validação com Pydantic
-Processamento em larga escala
-API REST / interface web
-Persistência em banco
-👨‍💻 Autor
+
+---
+
+## 👨‍💻 Autor
 
 Projeto desenvolvido para desafio técnico Python Sênior.
