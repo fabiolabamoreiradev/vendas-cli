@@ -24,11 +24,12 @@ A aplicação lê um arquivo CSV contendo dados de vendas e gera relatórios con
 
 ## 🏗️ Arquitetura
 
+```text
 vendas/
-├── parser.py # Leitura e validação do CSV
-├── core.py # Regras de negócio
-├── output.py # Formatação de saída
-└── cli.py # Interface de linha de comando
+├── parser.py   # Leitura e validação do CSV
+├── core.py     # Regras de negócio
+├── output.py   # Formatação de saída
+└── cli.py      # Interface de linha de comando
 
 
 ---
