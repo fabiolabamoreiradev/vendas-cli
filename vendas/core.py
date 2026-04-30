@@ -38,4 +38,13 @@ def produto_mais_vendido(data):
         quantidade = int(row["quantidade"])
         counts[produto] = counts.get(produto, 0) + quantidade
 
-    return max(counts, key=counts.get) if counts else ""
+    if not counts:
+        return ""
+
+    max_value = max(counts.values())
+
+    # retorna todos que têm o valor máximo
+    result = [k for k, v in counts.items() if v == max_value]
+
+    return result
+    # return max(counts, key=counts.get) if counts else ""

@@ -1,4 +1,6 @@
 produto,quantidade,preco_unitario,data_venda
 Camiseta,3,49.9,2026-01-10
-Calça,2,99.9,2026-02-15
+Calça,2,99.9,2026-02-10
+Calça,1,99.9,2026-02-15
 Tênis,1,199.9,2026-03-20
+Tênis,2,199.9,2026-03-20

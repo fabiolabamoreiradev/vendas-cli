@@ -1,6 +1,9 @@
 README.md
 pyproject.toml
+tests/test_cli.py
 tests/test_core.py
+tests/test_output.py
+tests/test_parser.py
 vendas/__init__.py
 vendas/cli.py
 vendas/core.py
